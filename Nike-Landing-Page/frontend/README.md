@@ -1,8 +1,6 @@
 # Nike Shoes Website Landing Page
 > This website is just a single page site, built with React + TailwindCSS.
 
-![Website Image](../../Screenshots/nike.png)
-
 ![Website Image](https://github.com/Pyloris/reactChallange/blob/master/Screenshots/nike.png?raw=true)
 
 ## To Install
