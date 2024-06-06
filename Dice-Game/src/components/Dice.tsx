@@ -20,6 +20,13 @@ function Dice() {
 
   const selected = useSelector((state: RootState) => state.selected.value)
 
+  const faces = [Dice1, Dice2, Dice3, Dice4, Dice5, Dice6];
+  
+  // preload images using useEffect
+  useEffect(() => {
+
+  })
+
   const audioFile = new Audio(RollAudio);
   const errorAudio = new Audio(ErrorAudio);
 
@@ -27,7 +34,6 @@ function Dice() {
 
   const [currFace, setFace] = useState(Dice4);
 
-  const faces = [Dice1, Dice2, Dice3, Dice4, Dice5, Dice6];
 
   async function roll(event: Event) {
     event.stopPropagation();
@@ -41,13 +47,15 @@ function Dice() {
     audioFile.play();
     let randomNumber: number = 0;
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 6; i++) {
 
-      await timeout(100);
       // search for 100 random numbers from 0 - 5
       randomNumber = Math.floor(Math.random()*10000 % 5);
 
-      setFace(faces[randomNumber]); 
+      // setFace(faces[randomNumber]); 
+      document.getElementById("diceImg")?.setAttribute("src", faces[randomNumber]);
+
+      await timeout(100);
     }
 
     if (randomNumber == selected - 1) {
@@ -60,7 +68,13 @@ function Dice() {
 
   return (
     <div>
-      <img className="w-[150px]" onClick={roll} src={currFace} />
+      <img  className="w-[150px] hidden" src={Dice1} />
+      <img  className="w-[150px] hidden" src={Dice2} />
+      <img  className="w-[150px] hidden" src={Dice3} />
+      <img  className="w-[150px] hidden" src={Dice4} />
+      <img  className="w-[150px] hidden" src={Dice5} />
+      <img  className="w-[150px] hidden" src={Dice6} />
+      <img id="diceImg" className="w-[150px]" onClick={roll} src={currFace} />
     </div>
   )
 }

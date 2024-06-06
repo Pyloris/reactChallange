@@ -27,9 +27,9 @@ function Play() {
 
     return (
         <div className="w-full h-screen p-5">
-            <div className="w-full flex flex-row justify-between items-center px-[100px] mt-12">
+            <div className="w-full flex flex-col gap-5 justify-between items-center px-10 mt-5 md:flex-row">
                 <div><Score /></div>
-                <div className="flex gap-5 justify-between items-center">
+                <div className="grid grid-cols-3 gap-5 md:flex md:gap-4">
                     <SelectBtn value="1" />
                     <SelectBtn value="2" />
                     <SelectBtn value="3" />
@@ -39,7 +39,7 @@ function Play() {
                 </div>
             </div>
 
-            <div className="w-full mt-[150px] flex flex-col items-center justify-center gap-7">
+            <div className="w-full mt-20 flex flex-col items-center justify-center gap-7">
                 <div>
                     <Dice />
                 </div>
