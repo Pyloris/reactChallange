@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Dice1 from '../assets/images/1.png'
 import Dice2 from '../assets/images/2.png'
 import Dice3 from '../assets/images/3.png'
@@ -21,11 +21,15 @@ function Dice() {
   const selected = useSelector((state: RootState) => state.selected.value)
 
   const faces = [Dice1, Dice2, Dice3, Dice4, Dice5, Dice6];
-  
+
   // preload images using useEffect
   useEffect(() => {
-
-  })
+    faces.forEach((src => {
+      let img = new Image();
+      img.src = src;
+      return img;
+    }));
+  }, [])
 
   const audioFile = new Audio(RollAudio);
   const errorAudio = new Audio(ErrorAudio);
@@ -68,12 +72,6 @@ function Dice() {
 
   return (
     <div>
-      <img  className="w-[150px] hidden" src={Dice1} />
-      <img  className="w-[150px] hidden" src={Dice2} />
-      <img  className="w-[150px] hidden" src={Dice3} />
-      <img  className="w-[150px] hidden" src={Dice4} />
-      <img  className="w-[150px] hidden" src={Dice5} />
-      <img  className="w-[150px] hidden" src={Dice6} />
       <img id="diceImg" className="w-[150px]" onClick={roll} src={currFace} />
     </div>
   )
