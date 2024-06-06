@@ -1,30 +1,38 @@
-# React + TypeScript + Vite
+# Dice Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="../Screenshots/diceHome.png" alt="Dice Game Home Page"/>
+<img src="../Screenshots/dicePlay.png" alt="Dice Game Play Page"/>
+<img src="../Screenshots/diceEx.png" alt="Dice Game Example Page"/>
 
-Currently, two official plugins are available:
+## To Install
+To download just this folder, you can use `git sparse-checkout`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+STEP 1:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```shell
+mkdir <repo_name>
+cd <repo_name>
+git init
+git remote add -f origin <repo_url>
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+STEP 2:
+```shell
+git sparse-checkout init
+
+# set the folder name you want git to download
+git sparse-checkout set "Dice-Game"
+
+# pull it from remote
+git pull origin master
+```
+
+STEP 3:
+
+```shell
+cd Dice-Game
+
+npm install
+
+npm run dev
+```
