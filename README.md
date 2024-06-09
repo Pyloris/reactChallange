@@ -14,3 +14,7 @@ This repository contains 10 projects which I did as a part of my effort to learn
 <img src="Screenshots/diceHome.png" alt="Dice Game Home Page"/>
 <img src="Screenshots/dicePlay.png" alt="Dice Game Play Page"/>
 <img src="Screenshots/diceEx.png" alt="Dice Game Example Page"/>
+
+# Foody Website
+- Foody-Zone
+![Website Image](./Screenshots/foody.png)
