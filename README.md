@@ -31,3 +31,10 @@ This repository contains 10 projects which I did as a part of my effort to learn
 <img src="./Screenshots/crypto1.png" alt="Dice Game Home Page"/>
 <img src="./Screenshots/crypto2.png" alt="Dice Game Play Page"/>
 <img src="./Screenshots/crypto3.png" alt="Dice Game Example Page"/>
+
+# Auth
+- Auth : has lots of screens, only shown 3. Check App.tsx for routes.
+
+<img src="./Screenshots/Auth1.png" alt="Auth 1"/>
+<img src="./Screenshots/Auth2.png" alt="Auth 2"/>
+<img src="./Screenshots/Auth3.png" alt="Auth 3"/>
