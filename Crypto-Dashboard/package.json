@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.5",
-    "apexcharts": "^3.49.1",
+    "apexcharts": "^3.50.0",
     "autoprefixer": "^10.4.19",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
